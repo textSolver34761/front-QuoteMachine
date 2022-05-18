@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'front-QuoteMachine';
+  title = 'Quote Machine';
+  author:String = '';
+  quote: String = '';
+  quoteModel: any
+
+  ngOnInit() {}
+
+  Submit() {
+    console.log("Quote",this.quote)
+    console.log("Author",this.author)
+  }
+
 }
+
+
