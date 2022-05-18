@@ -16,6 +16,7 @@ export class AppComponent {
   Submit() {
     console.log("Quote",this.quote)
     console.log("Author",this.author)
+    // next step : get all the data and send them to be saved in the back end of the app.
   }
 
 }
