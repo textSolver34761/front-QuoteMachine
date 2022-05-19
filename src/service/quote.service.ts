@@ -17,7 +17,7 @@ export class QuoteService {
   }
 
   saveQuotes(quotes:quoteModel){
-    return this.http.post(this.url, quotes);
+    return this.http.post(this.url+"/quotes", quotes);
   }
   
 }

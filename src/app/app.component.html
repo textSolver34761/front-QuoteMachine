@@ -1,4 +1,4 @@
-<form (ngSubmit) = "Submit()" >
+<form #quoteform="ngForm" (ngSubmit) = "Submit(quoteform.value)" >
   <div>
     <label>Quotes</label>
     <input type="text" id="quote" name="quote" [(ngModel)]="quote">

@@ -18,13 +18,12 @@ export class AppComponent {
     this.model = new quoteModel();
   }
 
-  Submit() {
+  Submit(data:any) {
     console.log("Quote",this.quote)
     console.log("Author",this.author)
     // next step : get all the data and send them to be saved in the back end of the app.
-    this.model
-    console.log("model" , this.model);
-    this.service.saveQuotes(this.model)
+    console.log("data " , data);
+    this.service.saveQuotes(data)
   }
 
 }
