@@ -19,15 +19,9 @@ export class AppComponent {
   }
 
   Submit(data:any) {
-    console.log("Quote",this.quote)
-    console.log("Author",this.author)
     // next step : get all the data and send them to be saved in the back end of the app.
-    console.log("data " , data);
-    this.service.saveQuotes(data)
-    this.service.saveQuotes(data).subscribe(
-      (      res: any) => {
-        console.log(res);
-      });
+    console.log("data ", data);
+    this.service.saveQuotes(data);
   }
 
 }
