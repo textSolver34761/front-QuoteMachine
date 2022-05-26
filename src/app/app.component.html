@@ -1,15 +1,3 @@
-<form #quoteform="ngForm" (ngSubmit) = "Submit(quoteform.value)" >
-  <div>
-    <label>Quotes</label>
-    <input type="text" id="quote" name="quote" [(ngModel)]="quote">
-  </div>
-  <div>
-    <label>Author</label>
-    <input type="text" id="author" name="author" [(ngModel)]="author">
-  </div>
 
-  <button type="submit">Send</button>
-
-</form>
 
 <router-outlet></router-outlet> 

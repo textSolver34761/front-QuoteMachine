@@ -13,14 +13,15 @@ export class QuoteService {
 
   constructor(private http : HttpClient ) {}
 
-  getQuotes() {
-    return this.http.get(this.url);
+  getQuotes() : Observable<quoteModel[]> {
+    console.log(this.url+"/quotes")
+    return this.http.get<quoteModel[]>(this.url+"/quotes");
   }
 
   saveQuotes(body:quoteModel) {
     console.log(this.url+"/save-quotes")
     return this.http.post(this.url+"/save-quotes", body);
   }
-  
+
 }
 
