@@ -19,7 +19,7 @@ export class QuoteService {
   }
 
   saveQuotes(quote:quoteModel): Observable<any> {
-    const headers = { 'content-type': 'text/html,application/xhtml+xml,application/xml'}
+    const headers = { 'content-type': 'application/json'}
     const body=JSON.stringify(quote);
     console.log(this.url + '/save-quotes', body,{'headers':headers})
     return this.http.post(this.url + '/save-quotes', body,{'headers':headers})
