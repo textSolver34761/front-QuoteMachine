@@ -17,25 +17,12 @@ export class QuoteService {
     console.log(this.url+"/quotes")
     return this.http.get<quoteModel[]>(this.url+"/quotes");
   }
-/*
-  saveQuotes(body:quoteModel) {
- //   const headers = new HttpHeaders().set('Content-Type', 'application/json');
-//    let headers = new HttpHeaders().set('content-type', 'application/json').set('Access-Control-Allow-Origin', '*');
-const headers = { 'content-type': 'application/json'}  
-const bodyJ=JSON.stringify(body);
-console.log(bodyJ)
-    console.log('url ',this.url+"/save-quotes", 'body ', bodyJ,  {headers})
-    return this.http.post(this.url+"/save-quotes", bodyJ, {'headers':headers})
 
-  }
-  */
   saveQuotes(quote:quoteModel): Observable<any> {
-    const headers = { 'content-type': 'application/json'}  
+    const headers = { 'content-type': 'text/html,application/xhtml+xml,application/xml'}
     const body=JSON.stringify(quote);
-    console.log(body)
     console.log(this.url + '/save-quotes', body,{'headers':headers})
     return this.http.post(this.url + '/save-quotes', body,{'headers':headers})
   }
 
 }
-

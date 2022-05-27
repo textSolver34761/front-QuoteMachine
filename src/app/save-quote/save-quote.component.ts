@@ -12,6 +12,7 @@ export class SaveQuoteComponent {
   author:String = '';
   quote: String = '';
   model : quoteModel;
+  dataJson : any;
   ngOnInit() {}
 
   constructor(private service:QuoteService){
@@ -20,8 +21,10 @@ export class SaveQuoteComponent {
 
   Submit(data:any) {
     // next step : get all the data and send them to be saved in the back end of the app.
-    console.log("data ", data);
-    this.service.saveQuotes(data);
+    this.dataJson = JSON.stringify(data);
+    console.log(this.dataJson)
+    this.service.saveQuotes(this.dataJson);
   }
 
 }
+
